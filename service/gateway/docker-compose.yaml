@@ -1,0 +1,23 @@
+version: "3"
+services:
+  golang:
+    build:
+      context: ./deploy/golang
+    environment:
+      - TZ=Asia/Shanghai
+    privileged: true
+    volumes:
+      - ./:/kd
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    tty: true
+    restart: always
+
+  krakend_ce:
+    image: devopsfaith/krakend:watch
+    volumes:
+      - ./deploy/krakend:/etc/krakend
+    ports:
+      - "8080:8080"
+    command: ["run", "-d", "-c", "/etc/krakend/krakend.json"]

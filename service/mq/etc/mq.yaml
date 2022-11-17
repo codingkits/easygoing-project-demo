@@ -1,0 +1,18 @@
+Name: MqSrv
+Host: 0.0.0.0
+Port: 8001
+Pro: 1
+
+NsqD:
+- Address: 127.0.0.1:4150
+  Topic: es_topic
+  Chan: es_chan
+
+Prometheus:
+  Host: 0.0.0.0
+  Port: 9091
+  Path: /metrics
+
+Log:
+  ServiceName: es-mq-srv
+  Level: error

@@ -1,0 +1,2 @@
+[KrakenD Log] 2022/11/01 10:54:02 main.go:101: [ /kd/local/dmp/query ] in the hijack list,do the plugin logic and then  forward request!
+[KrakenD Log] 2022/11/01 10:54:02 main.go:121: Auth Failure | current appKey:   appSecret: <nil>
